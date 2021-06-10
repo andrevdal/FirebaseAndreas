@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+    <script src ="script/app.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <title>Databaser</title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Registrer</a>
+        <a href="html/person.html">Personregister</a>
+        <a href="html/eiendom.html">Eiendomsregister</a>
+        <a href="html/kjøretøy.html">Kjøretøysregister</a>
+        <a href="html/ekteskap.html">Ekteskapsregister</a>
+      </div>
+
+      <h1> Registrer person:</h1>
+
+        <form id= "personreg">
+            <input id="fornavn" type="text" name="fornavn" placeholder="Fornavn">
+            <input id="etternavn" type="text" name="etternavn" placeholder="Etternavn">
+            <input id="fødselsdato" type="number" name="fødselsdato" placeholder="Fødselsdato">
+            <input id="postnummer" type="number" name="postnummer" placeholder="Postnummer">
+            <input id="postadresse" type="text" name="postadresse" placeholder="Postadresse">
+            <input id="ektefelle" type="number" name="ektefelle" placeholder="Ektefelle(personnummer)">
+            <br>
+            <Button type="submit"> Registrer </Button>
+        </form>
+
+      <h1> Registrer eiendom:</h1>
+
+        <form id= "eiendomreg">
+            <input id="adresse" type="text" name="adresse" placeholder="Adresse">
+            <input id="eiendomsnummer" type="number" name="eiendomsnummer" placeholder="Eiendomnummer">
+            <input id="areal" type="number" name="areal" placeholder="Areal">
+            <input id="kommune" type="text" name="kommune" placeholder="Kommune">
+            <input id="postnummer" type="number" name="postnummer" placeholder="Postnummer">
+            <input id="poststed" type="text" name="poststed" placeholder="Poststed">
+            <br>
+            <Button type="submit"> Registrer </Button>
+        </form>
+
+    <h1> Register kjøretøy</h1>
+
+    <form id= "kjøretøyreg">
+        <input id="eier" type="text" name="eier" placeholder="Eier">
+        <input id="kjøretøytype" type="text" name="kjøretøytype" placeholder="Kjøretøytype">
+        <input id="vekt" type="number" name="vekt" placeholder="Vekt">
+        <input id="chassinummer" type="text" name="chassinummer" placeholder="Chassinummer">
+        <input id="antallseter" type="number" name="antallseter" placeholder="Antall seter">
+        <input id="drivstoff" type="text" name="drivstoff" placeholder="Drivstoff">
+        <input id="registreringsaar" type="number" name="registreringsaar" placeholder="Registeringsaar">
+        <br>
+        <Button type="submit"> Registrer </Button>
+    </form>
+        
+    <ul id="personcollect"></ul>
+    <ul id="eiendomcollect"></ul>
+    <ul id="kjøretøycollect"></ul>
+</body>
+</html>
